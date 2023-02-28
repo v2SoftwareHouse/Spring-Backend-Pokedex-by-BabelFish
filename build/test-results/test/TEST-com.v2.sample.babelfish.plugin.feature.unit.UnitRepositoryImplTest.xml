@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.v2.sample.babelfish.plugin.feature.unit.UnitRepositoryImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-28T13:42:33" hostname="MacBook-Pro-de-caio.local" time="0.047">
+  <properties/>
+  <testcase name="when auth is required, then authorization header is set()" classname="com.v2.sample.babelfish.plugin.feature.unit.UnitRepositoryImplTest" time="0.038"/>
+  <testcase name="when fetch succeeds, the return a Result()" classname="com.v2.sample.babelfish.plugin.feature.unit.UnitRepositoryImplTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
