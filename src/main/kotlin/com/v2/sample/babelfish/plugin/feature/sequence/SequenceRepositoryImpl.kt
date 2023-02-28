@@ -9,14 +9,14 @@ import okhttp3.Interceptor
 open class SequenceRepositoryImpl(url: String) :
     BaseRepository(url), SequenceRepository {
     override fun getBulbasaur(): Any? {
-        return getBodyOrThrow(getService().fetchBulbasaur())
+        return getBodyOrThrow(getService().fetch("Bulbasaur"))
     }
 
     override fun getIvysaur(): Any? {
-        return getBodyOrThrow(getService().fetchIvysaur())
+        return getBodyOrThrow(getService().fetch("Ivysaur"))
     }
     override fun getVenusaur(): Any? {
-        return getBodyOrThrow(getService().fetchVenusaur())
+        return getBodyOrThrow(getService().fetch("Venusaur"))
     }
     override fun getService(interceptors: List<Interceptor>): PokedexAPI {
         return PokedexAPIBuilder(baseUrl).build()

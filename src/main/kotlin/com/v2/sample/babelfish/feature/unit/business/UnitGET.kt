@@ -9,7 +9,7 @@ open class UnitGET(
 ) : UseCase<String, Any>() {
 
     override fun guard(param: String?): Boolean {
-        return param != null
+        return !param.isNullOrEmpty()
     }
     override fun execute(param: String?): Output<Any> {
         val unit = repo.doFetch(param)

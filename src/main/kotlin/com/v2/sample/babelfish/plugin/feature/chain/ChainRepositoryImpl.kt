@@ -9,11 +9,11 @@ open class ChainRepositoryImpl(url: String)
     : BaseRepository(url), ChainRepository {
 
     override fun getBulbasaur(): Any? {
-        return getBodyOrThrow(getService().fetchBulbasaur())
+        return getBodyOrThrow(getService().fetch("Bulbasaur"))
     }
 
     override fun getIvysaur(): Any? {
-        return getBodyOrThrow(getService().fetchIvysaur())
+        return getBodyOrThrow(getService().fetch("Ivysaur"))
     }
 
     override fun getService(interceptors: List<Interceptor>): PokedexAPI {

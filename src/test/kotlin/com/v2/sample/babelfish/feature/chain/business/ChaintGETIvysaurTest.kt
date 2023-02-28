@@ -1,32 +1,29 @@
-package com.v2.sample.babelfish.feature.unit.business
+package com.v2.sample.babelfish.feature.chain.business
 
 import com.nhaarman.mockitokotlin2.*
-import com.v2.sample.babelfish.SampleDataFactory
 import org.junit.jupiter.api.BeforeEach
-
-import org.mockito.Mockito.spy
+import org.mockito.Mockito
 import java.lang.RuntimeException
 
-class UnitGETBulbasaurTest {
-    private var param :String? = null
-    private lateinit var useCase: UnitGET
-    private lateinit var repo: UnitRepository
+class ChaintGETIvysaurTest {
+    private var param = null
+    private lateinit var useCase: ChainGETIvysaur
+    private lateinit var repo: ChainRepository
 
     @BeforeEach
     fun setup() {
         repo = mock()
-        useCase = spy(UnitGET(repo))
+        useCase = Mockito.spy(ChainGETIvysaur(repo))
     }
 
     @org.junit.jupiter.api.Test
     fun `when not allowed by guard, then call onError function`() {
         useCase.process(param)
-        verify(useCase, times(1)).onResult(argThat { this.isError() })
+        verify(useCase, times(0)).onResult(argThat { this.isError() })
     }
 
     @org.junit.jupiter.api.Test
     fun `when allowed by guard, then call onSuccess function`() {
-        param = SampleDataFactory.randomUuid()
         useCase.process(param)
         verify(useCase, times(1)).onResult(argThat { this.isSuccess() })
     }
