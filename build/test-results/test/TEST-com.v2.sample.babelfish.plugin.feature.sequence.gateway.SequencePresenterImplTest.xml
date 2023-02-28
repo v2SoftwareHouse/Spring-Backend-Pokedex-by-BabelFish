@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.v2.sample.babelfish.plugin.feature.sequence.gateway.SequencePresenterImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-28T13:42:33" hostname="MacBook-Pro-de-caio.local" time="0.061">
-  <properties/>
-  <testcase name="when fetch throws exception, assert callbacks()" classname="com.v2.sample.babelfish.plugin.feature.sequence.gateway.SequencePresenterImplTest" time="0.055"/>
-  <testcase name="when fetch succeeds, assert callbacks()" classname="com.v2.sample.babelfish.plugin.feature.sequence.gateway.SequencePresenterImplTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
