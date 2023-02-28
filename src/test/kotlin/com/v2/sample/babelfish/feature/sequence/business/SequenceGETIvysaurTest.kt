@@ -5,15 +5,15 @@ import org.junit.jupiter.api.BeforeEach
 import org.mockito.Mockito
 import java.lang.RuntimeException
 
-class SequencetGETBulbasaurTest {
+class SequenceGETIvysaurTest {
     private var param = null
-    private lateinit var useCase: SequenceGETBulbasaur
+    private lateinit var useCase: SequenceGETIvysaur
     private lateinit var repo: SequenceRepository
 
     @BeforeEach
     fun setup() {
         repo = mock()
-        useCase = Mockito.spy(SequenceGETBulbasaur(repo))
+        useCase = Mockito.spy(SequenceGETIvysaur(repo))
     }
 
     @org.junit.jupiter.api.Test

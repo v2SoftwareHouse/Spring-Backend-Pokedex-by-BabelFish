@@ -1,20 +1,19 @@
-package com.v2.sample.babelfish.feature.chain.business
+package com.v2.sample.babelfish.feature.sequence.business
 
 import com.nhaarman.mockitokotlin2.*
 import org.junit.jupiter.api.BeforeEach
 import org.mockito.Mockito
 import java.lang.RuntimeException
 
-
-class ChaintGETBulbasaurTest {
+class SequenceGETBulbasaurTest {
     private var param = null
-    private lateinit var useCase: ChainGETBulbasaur
-    private lateinit var repo: ChainRepository
+    private lateinit var useCase: SequenceGETBulbasaur
+    private lateinit var repo: SequenceRepository
 
     @BeforeEach
     fun setup() {
         repo = mock()
-        useCase = Mockito.spy(ChainGETBulbasaur(repo))
+        useCase = Mockito.spy(SequenceGETBulbasaur(repo))
     }
 
     @org.junit.jupiter.api.Test

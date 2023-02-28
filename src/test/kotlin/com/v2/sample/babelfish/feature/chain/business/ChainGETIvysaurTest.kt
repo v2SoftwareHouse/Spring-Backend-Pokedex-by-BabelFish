@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.mockito.Mockito
 import java.lang.RuntimeException
 
-class ChaintGETIvysaurTest {
+class ChainGETIvysaurTest {
     private var param = null
     private lateinit var useCase: ChainGETIvysaur
     private lateinit var repo: ChainRepository

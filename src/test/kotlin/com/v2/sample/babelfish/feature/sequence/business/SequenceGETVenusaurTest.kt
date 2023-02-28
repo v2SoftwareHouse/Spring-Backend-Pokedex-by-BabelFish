@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.mockito.Mockito
 import java.lang.RuntimeException
 
-class SequencetGETVenusaurTest {
+class SequenceGETVenusaurTest {
     private var param = null
     private lateinit var useCase: SequenceGETVenusaur
     private lateinit var repo: SequenceRepository

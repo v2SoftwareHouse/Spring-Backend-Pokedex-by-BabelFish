@@ -14,7 +14,7 @@ open class UnitController {
         return UnitGatewayInjector.self.presenter
     }
 
-    @GetMapping("/greeting")
+    @GetMapping("/unit/greeting")
     fun greeting(@RequestParam(value = "name", defaultValue = DEFAULT) name: String): Any? {
         return presenter.doFetch(name)
     }
