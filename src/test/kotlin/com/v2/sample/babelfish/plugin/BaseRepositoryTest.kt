@@ -9,11 +9,11 @@ import com.v2.sample.babelfish.plugin.api.PokedexAPIBuilder
 import okhttp3.Interceptor
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.SocketPolicy
-import org.junit.Before
-import org.junit.Test
+import org.junit.jupiter.api.BeforeEach
 
 class BaseRepositoryTest : AbstractRepositoryTest<MockRepository>() {
-    @Before
+
+    @BeforeEach
     override fun setup() {
         super.setup()
     }
@@ -22,21 +22,21 @@ class BaseRepositoryTest : AbstractRepositoryTest<MockRepository>() {
         repository = spy(MockRepository(setupUrl()))
     }
 
-    @Test(expected = HttpException::class)
+    @org.junit.Test(expected = HttpException::class)
     fun `when any request returns 4XX, then throw HttpException`() {
         val response = MockResponse().apply { setResponseCode(400) }
         server.enqueue(response)
         repository.dumbRequest()
     }
 
-    @Test(expected = HttpException::class)
+    @org.junit.Test(expected = HttpException::class)
     fun `when any request returns 5XX, then throw HttpException`() {
         val response = MockResponse().apply { setResponseCode(500) }
         server.enqueue(response)
         repository.dumbRequest()
     }
 
-    @Test(expected = InternetConnectionException::class)
+    @org.junit.Test(expected = InternetConnectionException::class)
     fun `when any request is timed out, then throw InternetConnectionException`() {
         val response = MockResponse().apply { socketPolicy = SocketPolicy.NO_RESPONSE }
         server.enqueue(response)

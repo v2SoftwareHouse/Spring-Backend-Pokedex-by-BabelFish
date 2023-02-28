@@ -2,15 +2,15 @@ package com.v2.sample.babelfish.plugin
 
 import com.v2.sample.babelfish.plugin.api.BaseRepository
 import okhttp3.mockwebserver.MockResponse
-import org.junit.After
 import org.junit.Assert
-import org.junit.Before
-import org.junit.Test
+import org.junit.jupiter.api.AfterEach
+import org.junit.jupiter.api.BeforeEach
+
 
 abstract class InRepositoryTest<T : BaseRepository> : AbstractRepositoryTest<T>() {
     protected val authToken = "token"
 
-    @Before
+    @BeforeEach
     override fun setup() {
         super.setup()
     }
@@ -20,12 +20,12 @@ abstract class InRepositoryTest<T : BaseRepository> : AbstractRepositoryTest<T>(
         setupRepository(httpUrl)
     }
 
-    @After
+    @AfterEach
     fun teardown() {
         server.shutdown()
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun `when auth is required, then authorization header is set`() {
         enqueueEmptyResponse(200)
 

@@ -8,6 +8,15 @@ interface PokedexAPI {
     @GET("pokemon/")
     fun fetch(@Query("name") name: String?):Call<Any>
 
+    @GET("pokemon/bulbasaur")
+    fun fetchBulbasaur(): Call<Any>
+
+    @GET("pokemon/ivysaur")
+    fun fetchIvysaur(): Call<Any>
+
+    @GET("pokemon/venusaur")
+    fun fetchVenusaur(): Call<Any>
+
     @GET("test")
     fun dumbRequest(): Call<Any?>
 }

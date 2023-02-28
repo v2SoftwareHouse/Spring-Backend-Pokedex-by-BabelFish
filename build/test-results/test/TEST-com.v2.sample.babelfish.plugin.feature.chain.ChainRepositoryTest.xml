@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.v2.sample.babelfish.plugin.feature.chain.ChainRepositoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-02-28T13:42:33" hostname="MacBook-Pro-de-caio.local" time="0.139">
+  <properties/>
+  <testcase name="when auth is required, then authorization header is set()" classname="com.v2.sample.babelfish.plugin.feature.chain.ChainRepositoryTest" time="0.124"/>
+  <testcase name="when getBulbasaur succeeds, the return a Result()" classname="com.v2.sample.babelfish.plugin.feature.chain.ChainRepositoryTest" time="0.007"/>
+  <testcase name="when getIvysaur succeeds, the return a Result()" classname="com.v2.sample.babelfish.plugin.feature.chain.ChainRepositoryTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
